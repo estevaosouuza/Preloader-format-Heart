@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Heart</title>
+    <style type="text/css">
+    
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #af070b;
+  transform: rotate(-45deg);
+  left: 50%;
+  Transform: translate(-50%, -50%);
+  animation: heart 1.5s infinite;
+ 
+}
+@keyframes heart {
+    0%   {transform: rotate(-45deg) scale(0.8);}
+    50%  {
+           transform: rotate(-45deg) scale(1.0);
+         }
+    100%  {transform: rotate(-45deg) scale(0.8);}
+}
+
+
+@keyframes heart-color {
+  
+   0%  {background-color: #af070b;
+  bottom: 50%;
+  }
+     25%  {background-color: #af070b;
+  bottom: -50%;
+  }
+     50%  {background-color: #af070b;
+  bottom: -50%;
+  }
+  100% {background-color: #af070b;
+  bottom: 50%;
+  }
+   
+
+}
+@keyframes heart-color2 {
+    0%  {background-color: #af070b;
+  left:50%;
+  }
+    25%  {background-color: #af070b;
+  left:50%;
+  }
+    50%  {background-color: #af070b;
+  left:-50%;
+  }
+    75% {background-color: #af070b;
+  left:-50%;
+      
+  }
+  
+}
+
+.heart:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  animation: heart-color2 5s infinite;
+  background-color: #af070b;
+}
+
+.heart:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  bottom: 50%;
+  position: absolute;
+  animation: heart-color 5s infinite;
+  background-color: #af070b;
+}
+
+    
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>
